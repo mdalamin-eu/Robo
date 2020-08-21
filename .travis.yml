@@ -1,0 +1,13 @@
+sudo: required
+services:
+-docker
+before_install:
+     - sudo apt-get update -qq
+     - sudu apt-get install -qq nodejs
+node_js:
+         - 0.8.21
+script:
+    - docker build -t 0442438792/new-robo ./robo
+
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    - docker push 0442438792/new-robo
