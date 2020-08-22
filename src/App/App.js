@@ -24,7 +24,7 @@ export class App extends Component {
             })
             return (
                 <div className='tc'>
-                <h1 style={{tc:'center', color:'white'}}>Search Robots</h1>
+                <h1 style={{tc:'center', color:'white'}}>Search Robot</h1>
                 <SearchBox searchChange={this.onSearchChange}/>
                 <CardList robots = {filterRobots}/>
                 </div>
